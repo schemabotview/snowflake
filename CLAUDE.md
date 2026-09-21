@@ -6,9 +6,9 @@ Snowflake-specific.
 
 ## Status
 
-**AUTHORING (2026-09-21)** — the ten-course spine is declared. **Courses 01-08 are authored:
+**AUTHORING (2026-09-21)** — the ten-course spine is declared. **Courses 01-09 are authored:
 `platform` · `warehouses` · `storage` · `loading` · `transformation` · `governance` · `continuity` ·
-`performance` — 84 sections, 84 scenes, 0 wavs.** Courses 09-10 are empty. `npm run build`, `tsc --noEmit` and
+`performance` · `finops` — 94 sections, 94 scenes, 0 wavs.** Only `datacloud` (12) is left. `npm run build`, `tsc --noEmit` and
 `npm run check` are clean, every slide models under 1000 px, and every `icon:` is registered. Not
 deployed and not listed in `ui-graphl/catalog.json`.
 

@@ -1,0 +1,10 @@
+/* Snowflake's design surface — the three tokens @graphlearning/shell leaves to the repo.
+   Imported AFTER the shell's stylesheet in main.tsx, so these win the cascade.
+   --brand is Snowflake's own blue. It is COOL, so the slide's `###` counter tone is warm — the same
+   inversion sql and data-warehousing use. Distinct from its neighbours in the catalog: dw #5b8cff
+   (indigo), sql #34e0d0 (teal), python #4b8bbe (muted steel). */
+:root {
+  --brand: #29b5e8; /* Snowflake blue — eyebrow, links, the catalog card tint */
+  --brand-hover: #7fd6f5; /* lighter ice blue — the eyebrow's hover state */
+  --accent-2: #f5a742; /* warm counter tone to --brand: the slide's `###` subheading */
+}

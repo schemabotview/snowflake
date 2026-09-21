@@ -20,8 +20,8 @@ export const automaticClustering: Scene = {
     },
     {
       id: 'bill',
-      label: 'And it bills, serverless, continuously',
-      sub: 'rewriting a partition costs compute and new storage',
+      label: 'And it bills',
+      sub: 'serverless, and continuous',
       pattern: 'warn',
       icon: 'receipt',
     },
@@ -47,7 +47,7 @@ export const automaticClustering: Scene = {
     },
   ],
   edges: [
-    { source: 'how', target: 'bill', label: 'declaring a key does not sort the table — this service does, over time' },
+    { source: 'how', target: 'bill', label: 'declaring a key does not sort the table — this service does, over time, and every rewritten partition costs compute and new storage' },
     { source: 'bill', target: 'when', label: 'so the question is whether the reads it speeds up are worth the rewrites' },
     { source: 'when', target: 'control', label: 'and reclustering during a bulk load is pure waste' },
   ],

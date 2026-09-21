@@ -9,8 +9,8 @@ export const searchOptimization: Scene = {
   nodes: [
     {
       id: 'gap',
-      label: 'Clustering cannot help here',
-      sub: 'one key, no range — every partition might hold it',
+      label: 'Clustering cannot help',
+      sub: 'one key, and no range to order by',
       pattern: 'warn',
       icon: 'search',
     },
@@ -22,7 +22,7 @@ export const searchOptimization: Scene = {
       children: [
         { id: 'so-build', label: 'A second structure', sub: 'built and kept up by Snowflake', pattern: 'service', icon: 'boxes' },
         { id: 'so-probe', label: 'Probabilistic', sub: 'like a Bloom filter, not an index', pattern: 'service', icon: 'sigma' },
-        { id: 'so-skip', label: 'It rules partitions out', sub: 'so the scan never reads them', pattern: 'service', icon: 'funnel' },
+        { id: 'so-skip', label: 'It rules them out', sub: 'so the scan never reads them', pattern: 'service', icon: 'funnel' },
       ],
     },
     {

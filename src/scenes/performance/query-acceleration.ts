@@ -20,7 +20,7 @@ export const queryAcceleration: Scene = {
       pattern: 'group',
       cols: 3,
       children: [
-        { id: 'qa-on', label: 'On per warehouse', sub: 'ENABLE_QUERY_ACCELERATION', pattern: 'service', icon: 'power' },
+        { id: 'qa-on', label: 'On per warehouse', sub: 'one warehouse property', pattern: 'service', icon: 'power' },
         { id: 'qa-eval', label: 'Judged per query', sub: 'Snowflake decides if it helps', pattern: 'service', icon: 'brain' },
         { id: 'qa-lease', label: 'Work is offloaded', sub: 'to shared serverless compute', pattern: 'service', icon: 'zap' },
       ],
@@ -38,8 +38,8 @@ export const queryAcceleration: Scene = {
     },
     {
       id: 'cost',
-      label: 'Scale factor caps the spend',
-      sub: 'a multiple of the warehouse size it may lease',
+      label: 'Scale factor caps it',
+      sub: 'a multiple of the warehouse size',
       pattern: 'user',
       icon: 'ruler',
     },

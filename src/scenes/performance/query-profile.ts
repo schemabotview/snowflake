@@ -22,8 +22,8 @@ export const queryProfile: Scene = {
     },
     {
       id: 'ratio',
-      label: 'The ratio to look at first',
-      sub: '2 of 40,000 partitions is healthy; 40,000 of 40,000 is a full scan',
+      label: 'The first ratio',
+      sub: 'partitions scanned, over total',
       pattern: 'user',
       icon: 'gauge',
     },
@@ -40,7 +40,7 @@ export const queryProfile: Scene = {
     },
   ],
   edges: [
-    { source: 'numbers', target: 'ratio', label: 'a slow query is slow for one of these reasons, and guessing which wastes an afternoon' },
+    { source: 'numbers', target: 'ratio', label: 'a slow query is slow for one of these reasons — 2 of 40,000 partitions is healthy, 40,000 of 40,000 is a full scan' },
     { source: 'ratio', target: 'where', label: 'every fix in this course is aimed at one of those four rows' },
   ],
 }

@@ -9,8 +9,8 @@ export const clusteringDepth: Scene = {
   nodes: [
     {
       id: 'idea',
-      label: 'Depth is how many partitions overlap',
-      sub: 'at a given value of the key',
+      label: 'Depth is overlap',
+      sub: 'partitions sharing a key value',
       pattern: 'storage',
       icon: 'layers',
     },
@@ -40,8 +40,8 @@ export const clusteringDepth: Scene = {
     },
     {
       id: 'use',
-      label: 'Use it as a before and after',
-      sub: 'measure, change one thing, measure again',
+      label: 'A before and after',
+      sub: 'measure, change one thing, measure',
       pattern: 'user',
       icon: 'repeat',
     },

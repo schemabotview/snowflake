@@ -22,8 +22,8 @@ export const pruningFirst: Scene = {
     },
     {
       id: 'natural',
-      label: 'This is natural clustering',
-      sub: 'no key declared — just the order the data arrived in',
+      label: 'Natural clustering',
+      sub: 'no key — just the arrival order',
       pattern: 'storage',
       icon: 'boxes',
     },

@@ -1,12 +1,30 @@
 import type { Course } from '../types'
+import { historyIsFreeSection } from './01-history-is-free'
+import { timeTravelQueries } from './02-time-travel-queries'
+import { retentionSection } from './03-retention'
+import { undropSection } from './04-undrop'
+import { failSafeSection } from './05-fail-safe'
+import { zeroCopyCloneSection } from './06-zero-copy-clone'
+import { cloneWorkflowsSection } from './07-clone-workflows'
+import { recoveryDrill } from './08-recovery-drill'
+import { samplingForDev } from './09-sampling-for-dev'
 
-// continuity — course 07 of the ten-course Snowflake spine. Immutable partitions make the past queryable — and a copy of production nearly free.
-// PLANNED: 9 sections. Authored one reviewed slice at a time — as each section lands, add
-// its import above and list it in `sections` below, in order:
-//   01 history-is-free · 02 time-travel-queries · 03 retention · 04 undrop · 05 fail-safe
-//   06 zero-copy-clone · 07 clone-workflows · 08 recovery-drill · 09 sampling-for-dev
+// continuity — course 07 of the ten-course Snowflake spine. Immutable partitions make the past
+// queryable and a copy of production nearly free. Nine sections, nine scenes.
+// §01 pays off the promise made in storage §03; §08 is the payoff of this course — every earlier
+// section used once, in order, on a real incident.
 export const continuity: Course = {
   id: 'continuity',
   title: 'Time Travel, Cloning & Recovery',
-  sections: [],
+  sections: [
+    historyIsFreeSection,
+    timeTravelQueries,
+    retentionSection,
+    undropSection,
+    failSafeSection,
+    zeroCopyCloneSection,
+    cloneWorkflowsSection,
+    recoveryDrill,
+    samplingForDev,
+  ],
 }

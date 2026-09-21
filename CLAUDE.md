@@ -6,11 +6,15 @@ Snowflake-specific.
 
 ## Status
 
-**AUTHORING (2026-09-21)** — the ten-course spine is declared. **Courses 01-06 are authored:
-`platform` · `warehouses` · `storage` · `loading` · `transformation` · `governance` — 65 sections,
-65 scenes, 0 wavs.** Courses 07-10 are empty. `npm run build`, `tsc --noEmit` and `npm run check`
-are clean, every slide models under 1000 px, and every `icon:` is registered. Not yet a GitHub repo,
-not deployed, not listed in `ui-graphl/catalog.json`.
+**AUTHORING (2026-09-21)** — the ten-course spine is declared. **Courses 01-07 are authored:
+`platform` · `warehouses` · `storage` · `loading` · `transformation` · `governance` · `continuity`
+— 74 sections, 74 scenes, 0 wavs.** Courses 08-10 are empty. `npm run build`, `tsc --noEmit` and
+`npm run check` are clean, every slide models under 1000 px, and every `icon:` is registered. Not
+deployed and not listed in `ui-graphl/catalog.json`.
+
+**Audio:** `scripts/colab_generate_audio.ipynb` is retargeted to this repo. Regenerate and commit
+`scripts/audio-manifest.json` (`npm run gen:audio`) whenever narration changes — the notebook only
+sees committed text, and it commits each wav back from the Colab VM.
 
 **Courses 01-05 are the shippable prefix and can go as soon as they have audio** — one Colab pass
 per course over its `narration` fields. Nothing later is referenced by anything already written.

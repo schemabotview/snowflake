@@ -4,9 +4,10 @@ The **Snowflake** concept app for [GraphL](https://graphl.in). One section = a l
 (react-flow diagram or code snippet) + a right **slide** (markdown) + a **narration** script,
 rendered responsively (4K capture · laptop web app · mobile) and captured to video.
 
-> **Status: content complete, 2026-09-21.** All ten courses are authored — **106 sections, 106
-> scenes, no audio yet.** `npm run build`, `tsc --noEmit` and `npm run check` are clean. Not deployed
-> and not listed in the catalog yet; that happens once the narration wavs exist.
+> **Status: published, 2026-09-22.** All ten courses — **106 sections, 106 scenes, 106 narration
+> wavs (151.5 min)** — live at **[graphl.in/snowflake](https://graphl.in/snowflake/)**. `npm run
+> build`, `tsc --noEmit` and `npm run check` are clean. All ten courses are recorded: **157.4 min of
+> 4K masters**, with thumbnails and chaptered descriptions. Remaining: upload.
 
 Workspace-wide model, pipeline and conventions: the workspace [`README.md`](../README.md).
 Authoring rules specific to this concept: [`CLAUDE.md`](./CLAUDE.md). The full section plot:

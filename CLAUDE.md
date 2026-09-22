@@ -6,18 +6,38 @@ Snowflake-specific.
 
 ## Status
 
-**AUTHORING (2026-09-21)** — the ten-course spine is declared. **Courses 01-09 are authored:
-`platform` · `warehouses` · `storage` · `loading` · `transformation` · `governance` · `continuity` ·
-`performance` · `finops` — 94 sections, 94 scenes, 0 wavs.** Only `datacloud` (12) is left. `npm run build`, `tsc --noEmit` and
-`npm run check` are clean, every slide models under 1000 px, and every `icon:` is registered. Not
-deployed and not listed in `ui-graphl/catalog.json`.
+**PUBLISH SET COMPLETE (2026-09-22)** — all ten courses are authored, narrated, recorded and
+packaged. **106 sections · 106 scenes · 106 wavs (151.5 min) · 10 MP4s · 10 PNGs · 10 TXTs.**
+`npm run build`, `tsc --noEmit`, `npm run check` and `node .tmp/check-icons.mjs` are all clean.
+
+Live at **https://graphl.in/snowflake/** and listed in `ui-graphl/catalog.json` (data group, tint
+`#29b5e8`). Pages source is the `deploy.yml` workflow.
+
+**RECORDED** — all ten courses at 3840×2160 → `scripts/out/<course>.mp4`: **157.4 min, 767 MB**,
+h264/aac. Every duration lands within 0.2 s of its narration + per-section bell + tail, and mean
+level sits between −17.6 and −17.8 dB throughout, so the whole set cuts together — and matches
+`../data-warehousing`'s recorded range.
+
+**PUBLISH ASSETS** — `scripts/out/<course>.png` (ten 1280×720 thumbnails, scene left and the brand
+panel right from `DEFAULT_PANEL_BG`) and `<course>.txt` (ten descriptions). Chapter timings were
+cross-checked against the MP4s: every list starts at 0:00, ascends strictly, and ends inside its
+video. `scripts/titles.json` holds the search-facing titles the thumbnail header and description
+headline share.
+
+`scripts/out/` and `scripts/segments/` are gitignored, so **the entire publish set — 10 mp4 + 10 png
++ 10 txt — exists only on this machine. Back it up before anything cleans that directory.**
+Remaining: upload.
+
+**Capture notes.** The recorder spawns its own dev server; set `APP_URL` to reuse one (worth doing
+for a `thumb` run across all ten). Finished segments cache under `scripts/segments/<course>`, so a
+re-run resumes rather than starting over — which mattered: one course died mid-screencast on a Chrome
+`TargetCloseError` and resumed from its cached segments on the retry. Capture is real-time, so the
+full set is ~2.5 h; run it under `caffeinate -dimsu -w <pid>` **on AC power** (`PreventSystemSleep`
+is ignored on battery) or the machine sleeps and the run stalls.
 
 **Audio:** `scripts/colab_generate_audio.ipynb` is retargeted to this repo. Regenerate and commit
 `scripts/audio-manifest.json` (`npm run gen:audio`) whenever narration changes — the notebook only
 sees committed text, and it commits each wav back from the Colab VM.
-
-**Courses 01-05 are the shippable prefix and can go as soon as they have audio** — one Colab pass
-per course over its `narration` fields. Nothing later is referenced by anything already written.
 
 ## What this is
 
